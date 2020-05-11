@@ -4,31 +4,138 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Beat the Machine - Skills</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+    width: 70%;
+    margin: auto;
+  }
+  </style>
+<title>Beat the Machine - Meet the Characters!</title>
 	<link href='https://fonts.googleapis.com/css?family=Titillium Web' rel='stylesheet'>
       <style>
-@charset "utf-8";
-/* Global Styles */
-body{
-	background-color: #212121;
+	 
+@charset "UTF-8";
+/* Body */
+body {
+	font-family: Titillium Web;
+	background-color: #000000;
+	margin: 0;
 }
-	      
-/*header*/
-header {
-	font-family: 'Titillium Web', 
-	color: rgba(146,146,146,1.00);
-	font-size: 16px;
-	font-style: normal;
-	font-weight: 400;
+/* Container */
+.container {
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #333333;
 }
-
+.containers {
+	background-color: #000000;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	border-bottom-width: 0px;
+	padding-left: 0px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	
+}
+.primary_header {
+	padding-top: 55px;
+	width: 100%;
+	background-color: #333333;
+	height: 55%;
+	clear: both;
+	margin-left: auto;
+	margin-right: auto;
+}
+/* Header */
+headers {
+	padding-top: 100px;
+	width: 100%;
+	height: 0%;
+	background-color: #5D5E5D;
+	border-bottom: 1px solid #353635;
+}
+a{
+  position: relative;
+  display: inline-block;
+  color: #00D4FF;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 8px 30px;
+  overflow: hidden;
+  transition: 0.2s;
+}
+a:hover{
+  color: #00D4FF;
+  background-color: rgba(0, 77, 150, 0.1);
+  box-shadow: 0 0 10px #00D4FF, 0 0 40px #00D4FF, 0 0 80px #00D4FF;
+  transition-delay: 1s;
+}
+a span{
+  position: absolute;
+  display: block;
+}
+a span:nth-child(1)  {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg,transparent,#00D4FF);
+}
+a:hover span:nth-child(1) {
+  left: 100%;
+  transition: 1s;
+}
+a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg,transparent,#00D4FF);
+}
+a:hover span:nth-child(3) {
+  right: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg,transparent,#00D4FF);
+}
+a:hover span:nth-child(2) {
+  top: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg,transparent,#00D4FF);
+}
+a:hover span:nth-child(4) {
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 0.75s;
+}
 .secondary_header {
 	width: 100%;
-	padding-top: 50px;
-	padding-bottom: 50px;
-	background-color: #333333;
+	padding-top: 15px;
+	background-color: #151C1F;
 	clear: left;
 	position: fixed;
+	z-index: 100;
+	opacity: 0.87
 }
 .container .secondary_header ul {
 	margin-top: 0%;
@@ -39,720 +146,341 @@ header {
 	padding-right: 0px;
 	padding-bottom: 15px;
 	padding-left: 0px;
-	width: 100%;
+	width: 80%;
 }
 .secondary_header ul li {
 	list-style: none;
-	font-size: 30px;
-	float: left;
-	margin-right: auto;
+	font-size: 22px;
+	margin-left: 50px;
+	margin-right: 50px;
 	margin-top: 0px;
 	font-family: "Titillium Web";
 	font-weight: normal;
-	color: #FFFFFF;
+	color: #006DA0;
 	letter-spacing: 1px;
 	margin-left: auto;
 	text-align: center;
-	width: 25%;
 	transition: all 0.3s linear;
+	float: right;
 }
-.secondary_header ul li:hover {
-	color: #717070;
-	cursor: pointer;
-}
-/* Logo placeholder*/
-#logo {
-	float: left;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	width: 139px;
-	text-align: center;
-	color: rgba(255,255,255,1.00);
-	background-color: rgba(190,190,190,1.00);
-}
-/* div for Links in header */
-#headerLinks {
-	float: left;
-	width: calc( 100% - 139px );
-	text-align: right;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	background-color: rgba(255,255,255,1.00);
-}
-/* Links in header */
-#headerLinks a {
-	text-decoration: none;
-	color: rgba(146,146,146,1.00);
-	padding-left: 66px;
-	font-size: 14px;
-}
-/* Offer text banner*/
-#offer {
-	font-family: 'Titillium Web',
-	width: 80%;
-	clear: both;
-	background-color: rgba(246,246,246,1.00);
-	color: rgba(146,146,146,1.00);
-	padding-top: 57px;
-	padding-bottom: 57px;
-	background-color: #212121;
-	margin-left: auto;
-	margin-right: auto;
-}
-/* Main content of the site */
-#content {
-	clear: both;
-	overflow: auto;	
-	background-color: #212121;
-}
-/* Sidebar */
-#content .sidebar {
-	font-family: 'Titillium Web', 
-	color: rgba(146,146,146,1.00);
-	float: left; 
-	margin-left: 9.5%;
-	width: 20%;
-	padding-left: 1%;
-	padding-right: 1%;
-	text-align: center;
-	background-color: rgba(246,246,246,1.00);
-	height: 1500px;
-	background-color: #212121;
-}
-/* main content of the site */
-#content .mainContent {
-	float: left;
-	width: 60%;
-	text-align: center;
-	padding-left: 4%;
-	background-color: #212121;
-}
-/*menubar's properties for menus in sidebar */
-#content .sidebar #menubar {
-	text-align: left;
-	color: rgba(146,146,146,1.00);
-	position: relative;
-	left: 0%;
-	background-color: #212121;
-}
-/* Search field in sidebar */
-#content .sidebar #search {
-	width: 100%;
-	border-radius: 0px;
-	height: 42px;
-	text-align: center;
-	color: rgba(208,207,207,1.00);
-	font-size: 14px;
-	;
-	margin-bottom: 21px;
-}
-/* Whole page content */
-#mainWrapper {
-	width: 70%;
-	margin-left: auto;
-	margin-right: auto;
-}
-/*menu elements */
-.menu ul li {
-	list-style-type: none;
-	font-size: x-large;
-	position: relative;
-	left: -35px;
-	padding-top: 12px;
-}
-/* Product rows for catalog */
-#content .mainContent .productRow {
-	overflow: auto;
-	color: rgba(256, 256, 256, 1.0);
-}
-/* Each product Information in the catalog */
-.mainContent .productRow .productInfo {
-	float: left;
-	padding-left: 5%;
-	padding-right: 5%;
-	width: 22%;
-	color: rgba(256, 256, 256, 1.0);
-}
-/* Prices of a products in catalog */
-.productRow .productInfo .price {
-	font-family: 'Titillium Web';
-	color: rgba(256, 256, 256, 1.0);
-	font-size: 22px;
-	position: relative;
-	top: -20px;
-	margin-bottom: 5px;
-}
-.productRow .productInfo .price2 {
-	font-family: 'Titillium Web';
-	color: rgba(256, 256, 256, 1.0);
+ .secondary_header ul ll {
+	list-style: none;
 	font-size: 25px;
-	position: relative;
-	top: -20px;
+	margin-right: 50px;	 
+	margin-left: 50px;
+	margin-top: 0px;
+	font-family: "Titillium Web";
+	font-weight: normal;
+	color: #006DA0;
+	letter-spacing: 1px;
+	margin-left: auto;
+	text-align: center;
+	transition: all 0.3s linear;
+	float: left;
+}
+.logo {
+	padding-top: 100px;
+	color: #fff;
+	font-weight: bold;
+	margin-left: auto;
+	letter-spacing: 4px;
+	margin-right: auto;
+	text-align: center;
+	padding-top: 15px;
+	line-height: 2em;
+	font-size: 24px;
+}
+.hero_header {
+	color: #FFFFFF;
+	text-align: center;
+	margin: 0;
+	letter-spacing: 4px;
+}
+/* About Section */
+.text_column {
+	width: 90%;
+	text-align: left;
+	font-weight: lighter;
+	line-height: 25px;
+	float: left;
+	padding-left: 20px;
+	padding-right: 20px;
+	color: #A3A3A3;
+}
+.gallery {
+	clear: both;
+	display: inline-block;
+	width: 100%;
+	background-color: #333333;
+	/* [disabled]min-width: 400px;
+*/
+	padding-top: 0px;
 	margin-bottom: 0px;
 }
-/* Content holder for products in catalog*/
-.productRow .productInfo .productContent {
-	position: relative;
-	top: -37px;
-	font-size: 14px;
-	font-family: 'Titillium Web';
-	font-style: normal;
-	font-weight: 200;
-	color: rgba(256, 256, 256, 1.0);
-	white-space: pre-wrap;
-	margin-bottom: 10px;
-}
-/* Buy button for products in catalog */
-.productRow .productInfo .buyButton {
-	position: relative;
-	top: -48px;
-	width: 84%;
-	background-color: rgba(208,207,207,1.00);
-	height: 35px;
-	color: rgba(255,255,255,1.00);
-	border-style: none;
-	font-size: 14px;
-	text-transform: uppercase;
-	margin-top: 8px;
-}
-/* footer */
-#mainWrapper footer {
-	clear: both;
-	overflow: auto;
-	background-color: rgba(208,207,207,1.00);
-	font-family: 'Titillium Web';
-	font-style: normal;
-	font-weight: 200;
-	line-height: 1.8;
-	padding-top: 22px;
-	padding-left: 22px;
+.thumbnail {
+	width: 23%;
 	text-align: center;
-	padding-bottom: 22px;
-	padding-right: 22px;
-}
-/*Each footer content */
-#mainWrapper footer div {
-	width: 27%;
 	float: left;
-	padding-left: 4%;
-	padding-right: 2%;
-	color: rgba(255,255,255,1.00);
-	text-align: justify;
+	margin-top: 35px;
+	background-color: #F8F8F8;
+	margin-left: 1%;
+	margin-right: 1%;
+	border-radius: 3px;
+	padding-top: 20px;
+	border-bottom: 4px solid #6DC7D0;
 }
-/* Links in footer */
-footer div a {
-	color: rgba(146,146,146,1.00);
-	display: block;
-	text-decoration: none;
+.gallery .thumbnail h4 {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	color: #52BAD5;
+	text-align: left;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.gallery .thumbnail p {
+	margin: 0;
+	color: #B3B3B3;
+	text-align: left;
+	padding-left: 20px;
+}
+/* More info */
+.intro {
+	background-color: #FFFFFF;
+}
+.column {
+	width: 50%;
+	text-align: center;
+	padding-top: 30px;
+	float: left;
+}
+.intro .column h3 {
+	color: #FFFFFF;
 	text-align: center;
 }
-/* Product's images in catalog */
-.productInfo div img {
-	width: 100%;
+.intro .column p {
+	color: #FFFFFF;
 }
-/*Links in sidebar */
-.sidebar #menubar .menu ul li a {
-	color: rgba(146,146,146,1.00);
-	text-decoration: none;
-}
-.sidebar #menubar .menu ul li a:hover {
-	color: rgba(107,97,97,1.00);
-	text-decoration: none;
-}
-/* Menu headings in sidebar */
-#menubar .menu h2 {
-	font-size: 14px;
-}
-/*Links under menus in sidebar */
-#menubar .menu ul li a {
-	font-size: 14px;
-}
-/* Menus in sidebar */
-.sidebar #menubar .menu {
-	margin-bottom: 29px;
-}
-/* Container for links in footer */
-footer .footerlinks {
-	margin-top: -15px;
-}
-a{
-text-decoration: none;
-color: white;
-}
-
-a:visited{
-text-decoration: none;
-color: white;
-/* Media query for tablets */
-@media screen and (max-width:700px) {
-/* search field in sidebar */
-#content .sidebar #search {
-	display: none;
-}
-/* sidebar */
-#content .sidebar {
-	float: none;
+.cards {
 	width: 100%;
 	height: auto;
-	overflow: auto;
-	padding-left: 12%;
-	padding-top: 0px;
+	max-width: 400px;
+	max-height: 200px;
+	opacity: 0.8;
 }
-/* horizontal separators in sidebar */
-#content .sidebar hr {
-	display: none;
-}
-/*The sidebar and maincontent of page */
-#content {
-	position: relative;
-	top: -22px;
-	width: 100%;
-	overflow: hidden;
-}
-/*menu headings in sidebar */
-#menubar .menu h2 {
-	display: inline;
-	font-size: medium;
-	padding-right: 6%;
-}
-/* Unordered List of links */
-#menubar .menu ul {
-	display: inline;
-}
-/*list elements */
-#menubar .menu ul li {
-	display: inline;
-	font-size: medium;
-	padding-left: 0%;
-	padding-right: 3%;
-}
-/*The link to be hidden in tablet view */
-.sidebar #menubar .menu ul .notimp {
-	display: none;
-}
-/* menus in sidebar */
-.sidebar #menubar .menu {
-	width: 100%;
-	text-align: center;
-	position: relative;
-	top: 16px;
-}
-/*menubar in sidebar */
-#content .sidebar #menubar {
-	position: relative;
-	left: -7%;
-	overflow: hidden;
-	width: 95%;
-	padding-top: 0px;
-}
-/* offer banners content */
-#mainWrapper #offer p {
-	font-size: small;
-}
-/* main content region of page */
-#mainWrapper #content .mainContent {
-	overflow: hidden;
-	width: 100%;
-	margin-top: 40px;
-}
-/* Prices of products in catalog view */
-.productRow .productInfo .price {
-	font-size: 19px;
-	margin-bottom: 5px;
-}
-.productRow .productInfo .price2 {
-	font-size: 22px;
-	margin-bottom: 5px;
-}
-/* Content holders in catalog view */
-.productRow .productInfo .productContent {
-	font-size: 16px;
-}
-/* Buy buttons in catalog view */
-.productRow .productInfo .buyButton {
-	font-size: 15px;
-}
-/* Container for links in footer */
-#mainWrapper footer .footerlinks {
-	float: none;
-	width: 100%;
-	position: relative;
-	top: 17px;
-	clear: both;
-	text-align: center;
-	left: 0%;
-	padding-bottom: 19px;
-}
-/* Container for each footer divisions */
-#mainWrapper footer div {
-	width: 44%;
-	text-align: justify;
-	font-size: 15px;
-}
-/* Links in footer */
-.footerlinks p a {
-	padding-top: 0px;
-	padding-bottom: 0px;
-	display: inline;
-	padding-right: 35px;
-}
-/* Footer region */
-#mainWrapper footer {
-	padding-left: 16px;
-	overflow: hidden;
-}
-/* Links in header */
-header #headerLinks a {
-	padding-left: 0px;
+.intro .column p {
+	padding-left: 30px;
 	padding-right: 30px;
-}
-/* Offer- Text banner */
-#mainWrapper #offer {
-	padding-left: 22%;
-}
-/* Paragraphs in footer */
-footer .footerlinks p {
-	display: inline;
-}
-}
-
-/*media query for small screen devices */
-@media screen and (max-width:480px) {
-/*Container for links in header */
-#mainWrapper header #headerLinks {
-	width: 100%;
-	text-align: center;
-	background-color: rgba(190,190,190,1.00);
-	padding-bottom: 21px;
-}
-/* Logo placeholder*/
-#mainWrapper header #logo {
-	width: 100%;
-	text-align: center;
-}
-/* Links in header */
-header #headerLinks a {
-	text-align: center;
-	padding-right: 15px;
-	padding-left: 0px;
-}
-/*Offer - Text Banner */
-#mainWrapper #offer {
-	padding-left: 0px;
-	text-align: center;
-}
-/* Menubar in sidebar */
-#content .sidebar #menubar {
-	position: relative;
-	left: -8%;
-	text-align: center;
-}
-/*Menu headings in sidebar */
-#menubar .menu h2 {
-	width: 100%;
-	display: block;
-}
-/* Each product in catalog view */
-.mainContent .productRow .productInfo {
-	width: 100%;
-	display: block;
-	padding-left: 0px;
-	padding-right: 0px;
-	position: relative;
-	left: -2%;
-}
-#mainWrapper footer div {
-	width: 100%;
-	margin-left: -16px;
 	text-align: justify;
-	padding-bottom: 16px;
-	overflow: auto;
+	line-height: 25px;
+	font-weight: medium;
+	margin-left: 20px;
+	margin-right: 20px;
+	width: 80%;
+	margin-top: 4%;
 }
-/* Unordered list for menu elements */
-.menu ul {
-	position: relative;
-	padding-left: 24%;
-}
-/* Container for links in footer */
-#mainWrapper footer .footerlinks {
-	padding-left: 8%;
-}
-/* Main content which excludes the sidebar */
-#mainwrapper #content .mainContent {
-	margin-top: -81px;
+.button {
+	width: 200px;
+	margin-top: 40px;
+	margin-right: auto;
+	margin-bottom: auto;
+	margin-left: auto;
+	padding-top: 20px;
+	padding-right: 10px;
+	padding-bottom: 20px;
+	padding-left: 10px;
 	text-align: center;
+	vertical-align: middle;
+	border-radius: 0px;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 2px;
+	border: 3px solid #FFFFFF;
+	color: #FFFFFF;
+	transition: all 0.3s linear;
+}
+.button:hover {
+	background-color: #6DC7D0;
+	color: #FFFFFF;
+	cursor: pointer;
+}
+.copyright {
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: #717070;
+	color: #FFFFFF;
+	text-transform: uppercase;
+	font-weight: lighter;
+	letter-spacing: 2px;
+	border-top-width: 2px;
+}
+footer {
+	background-color: #B3B3B3;
+	padding-top: 60px;
+	padding-bottom: 60PX;
+}
+.intro {
+	display: inline-block;
+	background-color: #006493;
+}
+.profile {
+	width: 50%;
+}
+.gallery .thumbnail .tag {
+	color: #5D5E5D;
+	padding-bottom: 4px;
+	padding-top: 4px;
+	text-align: left;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+/* Mobile */
+@media (max-width: 320px) {
+.logo {
 	width: 100%;
+	text-align: center;
+	margin-top: 13px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+}
+.text_column {
+	width: 100%;
+	text-align: justify;
+	padding: 0;
+}
+.intro .column p {
+	width: 80%;
+	margin-left: 0px;
+}
+.text_column {
+	padding-left: 20px;
+}
+.thumbnail {
+	width: 100%;
+}
+.column {
+	width: 100%;
+	margin-top: 0px;
+}
+.hero_header {
+	padding-left: 10px;
+	padding-right: 10px;
+	line-height: 22px;
+	text-align: center;
+}
+}
+
+/* Small Tablets */
+@media (min-width: 321px)and (max-width: 767px) {
+.logo {
+	width: 100%;
+	text-align: center;
+	margin-top: 13px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+}
+.text_column {
+	width: 100%;
+	text-align: left;
+	padding: 0;
+}
+.thumbnail {
+	width: 100%;
+}
+.column {
+	width: 100%;
+	margin-top: 0px;
+}
+.thumbnail {
+	width: 100%;
+}
+.text_column {
+	padding-left: 20px;
+	padding-right: 20px;
+	width: 90%;
+}
+.column {
+	width: 100%;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+.profile {
+	width: 100%;
+}
+.intro .column p {
+	width: 90%;
+	text-align: center;
 	padding-left: 0px;
 }
 }
 
+/* Small Desktops */
+@media (min-width: 768px) and (max-width: 1096px) {
+.text_column {
+	width: 100%;
+}
+.thumbnail {
+	width: 48%;
+}
+.text_column {
+	width: 90%;
+	margin: 0;
+	padding: 20px;
+}
+.intro .column p {
+	width: 80%;
+}
+}
+	</style>
 
-      </style>
-<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
-
-<script src="http://use.edgefonts.net/source-sans-pro:n2:default.js" type="text/javascript"></script>
-<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
 </head>
 <body>
-
-<nav class="secondary_header">
+<!-- Main Container -->
+<div class="containers"> 
+<header>
+<nav class="secondary_header" id="menu">
       <ul>
-        <li><a href="index.html">HOME</a></li>
-        <li><a href="skills.html">SKILLS</a></li>
-        <li><a href="patch.html">UPDATE HISTORY</a></li>
-        <li><a href="story.html">STORY</a></li>
+	<ll><img src="Untitled-1.png" width="150px"></ll> 
+        <li><a href="skills.html">SKILLS<span></span><span></span><span></span><span></span></a></li>
+        <li><a href="patch.html">UPDATE HISTORY<span></span><span></span><span></span><span></span></a></li>
+        <li><a href="story.html">STORY<span></span><span></span><span></span><span></span></a></li>  
+	<li><a href="index.html">HOME<span></span><span></span><span></span><span></span></a></li>
       </ul>
     </nav>
-<div id="mainWrapper">
-  <section id="offer"> 
-    <!-- The offer section displays a banner text for promotions -->
-    <video controls style="width:100%" class="sett" loop autoplay>
-  	<source src="BTMTrailer_0.93B.mp4" type="video/mp4">
-    </video>
-
-
+</header>
+<div class="container"> 
+  <!-- Header -->
+<div class="primary_header">
+  <header class="headers">
+    <h4 class="logo">CHARACTERS - BEAT THE MACHINE</h4>
+  </header>
+  <!-- Hero Section -->
+  <section class="intro">
+    <div class="column">
+      <h3>DAMON - THE COCKY CADET</h3>
+      <img src="Damon.png" width="200"> </div>
+    <div class="column">
+      <p>The main protagonist of Beat the Machine. His cocky attitude and the I can do it all attitude might be the help that Sector 8 needs in defending the nasty attacks from Sector IX. While he might still be a rookie cadet in the eyes of Syncopia, who has extremely high intentions for people serving under her, Damon has had some previous experience in fighting evil.</p>
+      <p>	  
+    </div>
   </section>
-  <div id="content">
-    <section class="sidebar"> 
-      <!-- This adds a sidebar with 1 searchbox,2 menusets, each with 4 links -->
-      <div id="menubar">
-      <nav class="menu">
-          <h2><!-- Title for menuset 1 -->Unlisted Skill Tree Attributes </h2>
-          <hr>
-      </div>
-      <div id="menubar">
-        <nav class="menu">
-          <h2><!-- Title for menuset 1 -->Vitality </h2>        
-          <ul>
-            <!-- List of links under menuset 1 -->
-            <li><a href="#" >Healing Strikes - Attacks and Abilities heal you for a percentage of damage dealt.</a></li>
-            <li><a href="#" >Armour Up! - Each time you land an attack, gain a stack of armour, stack amount capped.</a></li>
-            <li><a href="#" >Heightened Defenses - Gain armour based on your missing health.</a></li>
-            <li><a href="#" >Fervor of Battle - Gain armour based on how many units are nearby.</a></li>	
-            <li><a href="#" >Vital Strikes - Gain increased damage based on your max health.</a></li>	
-	    <li><a href="#" >Brute Force - Gain increased damage based on your total armour.</a></li>	
-            <li><a href="#" >Defense Mechanism - When enemies get within a certain range you deal a percentage of your current health to nearby units and gain additional armour upon collision.</a></li>	
-            
-          </ul>
-        </nav>
-	<div id="menubar">
-        <nav class="menu">
-          <h2><!-- Title for menuset 1 -->Utility </h2>        
-          <ul>
-            <!-- List of links under menuset 1 -->
-            <li><a href="#" >Clarity - Passive cooldowns are lowered. Durations of stacks increased</a></li>
-            <li><a href="#" >Coherence - Active cooldowns are lowered. Gain shielding for landing attacks.</a></li>
-            <li><a href="#" >Force Fighter - Gain damage based on your rate of fire.</a></li>
-            <li><a href="#" >Tempo Fighter - Gain rate of fire based on your damage.</a></li>	
-            <li><a href="#" >Break the Machine - All actives are enhanced.</a></li>	
-	    
-          </ul>
-        </nav>
-	<nav class="menu">
-          <h2><!-- Title for menuset 1 -->Power </h2>        
-          <ul>
-            <!-- List of links under menuset 1 -->
-            <li><a href="#">Reactor Retaliation - Upon taking damage, nearby units are damaged.</a></li>
-            
-	    
-          </ul>
-        </nav>
-        
-      </div>
-    </section>
-    <section class="mainContent">
-      <div class="productRow"><!-- Each product row contains info of 3 elements -->
-        <article class="productInfo"><!-- Each individual product description -->			
-          <p class="price2">GREATER RESTORATION</p>
-          <img src="GreaterRestoration.png">	
-          <p class="price">VITALITY - TIER ONE</p>
-          <p class="productContent">After a short time, your next attack heals you for a percentage of your maximum health.</p>        
-	</article>
-	<article class="productInfo"><!-- Each individual product description -->
-	  <p class="price2">AGILITY ATTACKS</p>
-          <img src="AgilityAttacks.png">
-          <p class="price">VITALITY - TIER TWO</p>
-          <p class="productContent">After a short time, your next attack grants movement and heals you based on your armour and damage built.</p>        
-	</article>
-	<article class="productInfo"><!-- Each individual product description -->
-          <p class="price2">ARMADA</p>
-	  <img src="Armada.png">
-          <p class="price">VITALITY - TIER FOUR</p>
-          <p class="productContent">Four protector ships surround the player that block the first incoming projectile or collision. After a short time, the ship will regenerate.</p>        
-	</article>
-        <article class="productInfo"><!-- Each individual product description -->
-      </div>
-      <div class="productRow"> 
-        <!-- Each product row contains info of 3 elements -->
-        <article class="productInfo"><!-- Each individual product description -->		
-          <p class="price2">HULL MENDING</p>
-          <img src="HullMending.png">
-          <p class="price">VITALITY - TIER FIVE</p>
-          <p class="productContent">Upon Activation, restore a large percentage of your maximum health over a short time.</p>        
-	</article>
-        <article class="productInfo"><!-- Each individual product description -->
-	  <p class="price2">POWER SURGE</p>
-          <img src="PowerSurge.png">
-          <p class="price">VITALITY - TIER FIVE</p>
-          <p class="productContent">Upon Activation, shield yourself for a short time, after the time has expired, the remaining shield detonates, dealing damage to nearby enemies.</p>        
-	</article>
-        <article class="productInfo"><!-- Each individual product description -->
-	  <p class="price2">SONIC RIFTS</p>
-          <img src="Sonic Rifts.png">
-          <p class="price">VITALITY - TIER FIVE</p>
-          <p class="productContent">Upon Activation, tremors of sonic energy surround the player, dealing damage to units that collide with the rifts.</p>        
-	</article>
-      </div>
-      <div class="productRow"> 
-        <!-- Each product row contains info of 3 elements -->
-        <article class="productInfo"><!-- Each individual product description -->		
-          <p class="price2">OVERCLOCK</p>
-          <img src="OverClock.png">
-          <p class="price">UTILITY - TIER ONE</p>
-          <p class="productContent">Every time you hit an enemy gain a stack of rate of fire, stack amount capped.</p>        
-	</article>
-        <article class="productInfo"><!-- Each individual product description -->
-	  <p class="price2">RAPID FURY</p>
-          <img src="RapidFury.png">
-          <p class="price">UTILITY - TIER ONE</p>
-          <p class="productContent">Each time you kill an enemy, gain a burst of rate of fire for a few seconds.</p>        
-	</article>
-        <article class="productInfo"><!-- Each individual product description -->
-	  <p class="price2">LAST CHANCE</p>
-          <img src="LastChance.png">
-          <p class="price">UTILITY - TIER TWO</p>
-          <p class="productContent">As your health depletes, your movement speed increases.</p>        
-	</article>
-      </div>
-      <div class="productRow"> 
-        <!-- Each product row contains info of 3 elements -->
-        <article class="productInfo"><!-- Each individual product description -->		
-          <p class="price2">WAVE DASH</p>
-          <img src="WaveDash.png">
-          <p class="price">UTILITY - TIER FOUR</p>
-          <p class="productContent">Upon activation, charge forward a short distance.</p>        
-	</article>
-        <article class="productInfo"><!-- Each individual product description -->
-	  <p class="price2">TIME CAPSULE</p>
-          <img src="TimeCapsule.png">
-          <p class="price">UTILITY - TIER FOUR</p>
-          <p class="productContent">Upon activation, shoot out a capsule of energy, that causes enemies to be slowed within its range, enemies also take damage each second they are slowed.</p>        
-	</article>
-        <article class="productInfo"><!-- Each individual product description -->
-	  <p class="price2">CHARGE GATE</p>
-          <img src="ChargeGate.png">
-          <p class="price">UTILITY - TIER FIVE</p>
-          <p class="productContent">After you drop below a threshold, a ring of energy spawns, granting you movement and damage reduction as long as you stay within its bounds.</p>        
-	</article>
-      </div>
-      <div class="productRow"> 
-        <!-- Each product row contains info of 3 elements -->
-        <article class="productInfo"><!-- Each individual product description -->		
-          <p class="price2">CHARGING POWER</p>
-          <img src="ChargingPower.png">
-          <p class="price">UTILITY - TIER SIX</p>
-          <p class="productContent">Taking damage grants stacks of power, once you reach a set value, gain amplified damage for a short time.</p>        
-	</article>
-        <article class="productInfo"><!-- Each individual product description -->
-	  <p class="price2">CHARGING FIRE</p>
-          <img src="ChargingFire.png">
-          <p class="price">UTILITY - TIER SIX</p>
-          <p class="productContent">Taking damage grants stacks of fire, once you reach a set value, gain amplified rate of fire for a short time.</p>        
-	</article>
-        <article class="productInfo"><!-- Each individual product description -->
-	  <p class="price2">PUMP UP THE VOLUME</p>
-          <img src="PumpUptheVolume.png">
-          <p class="price">POWER - TIER ONE</p>
-          <p class="productContent">Attacks toward enemies, mark them as ENCRYPTED, attacking the same enemy heals you for a percentage of damage dealt. Attacking a new enemy removes the ENCRYPTED bonus.</p>        
-	</article>
-      </div>	   
-      <div class="productRow"> 
-        <!-- Each product row contains info of 3 elements -->
-        <article class="productInfo"><!-- Each individual product description -->		
-          <p class="price2">AFTERBURNER</p>
-          <img src="AfterBurner.png">
-          <p class="price">POWER - TIER TWO</p>
-          <p class="productContent">As you travel a stream of energy follows the player, damaging all enemies caught within the path.</p>        
-	</article>
-        <article class="productInfo"><!-- Each individual product description -->
-	  <p class="price2">TRIPLE BARRAGE</p>
-          <img src="TripleBarrage.png">
-          <p class="price">POWER - TIER TWO</p>
-          <p class="productContent">Fire two additional streams of bullets that deal a percentage of the damage your regular attacks do. They still apply all on hit effects.</p>        
-	</article>
-        <article class="productInfo"><!-- Each individual product description -->
-	  <p class="price2">CRITICAL!</p>
-          <img src="Critical!.png">
-          <p class="price">POWER - TIER THREE</p>
-          <p class="productContent">Your critical strike damage is increased and your critical strike chance is also enhanced.</p>        
-	</article>
-      </div>
-      <div class="productRow"> 
-        <!-- Each product row contains info of 3 elements -->
-        <article class="productInfo"><!-- Each individual product description -->		
-          <p class="price2">LUCK OF THE DRAW</p>
-          <img src="LuckoftheDraw.png">
-          <p class="price">POWER - TIER THREE</p>
-          <p class="productContent">Your critical strike chance is drastically increased but at a cost, you lose critical strike damage.</p>        
-	</article>
-        <article class="productInfo"><!-- Each individual product description -->
-	  <p class="price2">DOOM BLADES</p>
-          <img src="DoomBlades.png">
-          <p class="price">POWER - TIER FOUR</p>
-          <p class="productContent">Two blades orbit the player, dealing damage whenever they come in contact with an enemy, each time you succesfully strike a unit, gain movement speed for a short time.</p>        
-	</article>
-        <article class="productInfo"><!-- Each individual product description -->
-	  <p class="price2">CHAIN REACTION</p>
-          <img src="ChainReaction.png">
-          <p class="price">POWER - TIER FIVE</p>
-          <p class="productContent">Attacking the same unit, grants you stacks of damage amplication. Attacking a new unit resets the stack counter to 0.</p>        
-	</article>
-      </div>
-      <div class="productRow"> 
-        <!-- Each product row contains info of 3 elements -->
-        <article class="productInfo"><!-- Each individual product description -->		
-          <p class="price2">LASHING BLITZ</p>
-          <img src="LashingBlitz.png">
-          <p class="price">POWER - TIER FIVE</p>
-          <p class="productContent">When your attacks hit an enemy, other enemies nearby also take a percentage of the damage dealt.</p>        
-	</article>
-        <article class="productInfo"><!-- Each individual product description -->
-	  <p class="price2">PHASER LASER</p>
-          <img src="PhaserLaser.png">
-          <p class="price">POWER - TIER SIX</p>
-          <p class="productContent">After a short time, fire a big laser that deals massive damage to all enemies hit.</p>        
-	</article>
-        <article class="productInfo"><!-- Each individual product description -->
-	  <p class="price2">ENHANCED DOOM</p>
-          <img src="EnhancedDoom.png">
-          <p class="price">POWER - TIER SIX</p>
-          <p class="productContent">Your Doom Blades expand into a larger radius and spin faster but its costs health to keep it active. Disables below a certain health threshold.</p>        
-	</article>
-      </div>
-      <div class="productRow"> 
-        <!-- Each product row contains info of 3 elements -->
-        <article class="productInfo"><!-- Each individual product description -->		
-          <p class="price2">TRIP MINE</p>
-          <img src="Trip Mine.png">
-          <p class="price">POWER - TIER SIX</p>
-          <p class="productContent">Launch a mine behind you that's armed. When an enemy collides with it, it explodes dealing damage to all nearby units</p>        
-	</article>
-        <article class="productInfo"><!-- Each individual product description -->
-	  <p class="price2">LETHAL STRIKES</p>
-          <img src="LethalStrikes.png">
-          <p class="price">POWER - TIER SEVEN</p>
-          <p class="productContent">Your attacks penetrate through units dealing reduced damage to targets after the first.</p>        
-	</article>
-      </div>
-      
-    </section>
-  </div>
- 
-</div>
+  <section class="intro">
+    <div class="column">
+      <h3>T.O.M - THE B.A.D GUY</h3>
+      <img src="T.O.M.png" width="200"> </div>
+    <div class="column">
+      <p>The evil villain, that's attacking Sector VIII. He's sent his army of Speed, Shell, and other virus in order to take over what's level of Sector VIII. With a love/hate relationship toward Syncopia, why does his wish to steal all the remaining power she has over the Origin Sectors?</p>
+      <p>
+    </div>
+  </section>
+	
+  <!-- Stats Gallery Section -->
+  
+  <!-- Footer Section -->
+  
+<!-- Main Container Ends -->
 </body>
 </html>
