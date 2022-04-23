@@ -19,12 +19,31 @@
 	<link href='https://fonts.googleapis.com/css?family=Agency FB' rel='stylesheet'>
       <style>
 @charset "UTF-8";
-/* Body */body {
+function ZZ()
+{
+	if(start==0)
+	{
+	w=photo.width;
+	h=photo.width;
+	photo.width = photo.width * 4;
+	photo.height = photo.height * 4;
+	start = 1;
+	}
+	else
+	{
+	photo.width = w;
+	photo.height = h;
+	start = 0;
+	}
+
+}
+/* Body */
+body {
 	font-family: Agency FB;
 	font-weight: Bold;
 	background-color: #2A3237;
 	margin: 0;
-}
+}	  
 .btn {
   font-size: 20px;
   font-variant: small-caps;
@@ -259,6 +278,13 @@ h1{
 	padding-bottom: 10px;
 	color: #FFFFFF;	
 	background-color: #E00029;
+}
+h9{
+	font-weight: Bold;
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-bottom: 10px;
+	color: #FFFFFF;	
 }
 h7{
 	padding-top: 100px;
@@ -931,7 +957,7 @@ body {
 <section>
 <div class="container7">
 <div class="container6">
-    <h1>About the Game:</h1>
+    <h9>About the Game:</h9>
     <section class="intro">
     <div class="column">
       <h3>DAMON - THE COCKY CADET</h3>
@@ -950,7 +976,7 @@ body {
   <section class="intro">
     <div class="column">
       <h3>DAMON - THE COCKY CADET</h3>
-      <img src="Damon.png" width="250"> </div>
+      <img src="Damon.png" width="250" onclick="ZZ()"> </div>
     <div class="columnr">
       <p>Damon is the main protagonist of Beat the Machine: Rebooted. His cocky and I can do it all attitude might be the help that Sector VIII needs in defending the nasty attacks from T.O.M. While Damon might still be a rookie in the eyes of both Syncopia and Logan, his goal is to save Sector VIII from total destruction.</p>
       <p>	  
