@@ -802,15 +802,10 @@ a{
       </ul>
     </nav>
 	<div id="hamburger-icon" onclick="myfunction()">
-		<div class="bar1"></div>
-		<div class="bar2"></div>
-		<div class="bar3"></div>
-	<ul class="mobile-menu">
-	<li><a href="skills.html">SUPPORT<span></span><span></span><span></span><span></span></a></li> 
-        <li><a href="patch.html">UPDATE HISTORY<span></span><span></span><span></span><span></span></a></li>
-        <li><a href="story.html">STORE<span></span><span></span><span></span><span></span></a></li>  
-	<li><a href="index.html">HOME<span></span><span></span><span></span><span></span></a></li>
-	</ul>
+	<a href="skills.html">SUPPORT<span></span><span></span><span></span><span></span></a>
+        <a href="patch.html">UPDATE HISTORY<span></span><span></span><span></span><span></span></a>
+        <a href="story.html">STORE<span></span><span></span><span></span><span></span></a>
+	<a href="index.html">HOME<span></span><span></span><span></span><span></span></a>
 	</div>
 	<script src="index.js"></script>
 </header>
@@ -870,7 +865,7 @@ a{
 <script>
 <script>
 function myFunction() {
-  var x = document.getElementById("mobile-menu");
+  var x = document.getElementById("hamburger-icon");
   if (x.style.display === "block") {
     x.style.display = "none";
   } else {
