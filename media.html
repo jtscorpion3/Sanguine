@@ -77,41 +77,6 @@
 	padding-bottom: 0px;
 	
 }
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-  position: relative;
-}
-
-.topnav #myLinks {
-  display: none;
-}
-
-.topnav a {
-  color: white;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  display: block;
-}
-
-.topnav a.icon {
-  background: black;
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.active {
-  background-color: #04AA6D;
-  color: white;
-}
 .ascaps{
 	position: absolute;
 	top: 30%;
@@ -424,7 +389,6 @@ p{
 	flex-direction: column;
 	align-items: left;
 	justify-content: flex-start;
-	margin-bottom: 200px;
 }
 .mobile-menu{
 	display: none;
@@ -712,10 +676,9 @@ header nav{
 	padding-top: 20px;
 	padding-left: 20px;
 }
-.open.#hamburger-icon {
-	display: block;
-	padding-top: 20px;
-	padding-left: 20px;
+#container3.push-down
+{
+  margin-top:250px;
 }
 h4{
 	font-size: 20px;
@@ -836,19 +799,16 @@ a{
 	<li><a href="index.html">HOME<span></span><span></span><span></span><span></span></a></li>
       </ul>
     </nav>
-	<div class="topnav">  
-	<a href="index.html">HOME<span></span><span></span><span></span><span></span></a>
-  <div id="myLinks">
-    <a href="skills.html">SUPPORT<span></span><span></span><span></span><span></span></a>
-        <a href="patch.html">UPDATE HISTORY<span></span><span></span><span></span><span></span></a>
-        <a href="story.html">STORE<span></span><span></span><span></span><span></span></a>
-	<a href="index.html">HOME<span></span><span></span><span></span><span></span></a>
-  </div>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
-	</div>
-	
+	<div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+	<div class="bar1"></div>
+		<div class="bar2"></div>
+		<div class="bar3"></div>
+		<ul class="mobile-menu">
+		<li><a href="skills.html">SUPPORT<span></span><span></span><span></span><span></span></a></li> 
+        <li><a href="patch.html">UPDATE HISTORY<span></span><span></span><span></span><span></span></a></li>
+        <li><a href="story.html">STORE<span></span><span></span><span></span><span></span></a></li>  
+		<li><a href="index.html">HOME<span></span><span></span><span></span><span></span></a></li>
+		</ul>
 	</div>
 	<script src="index.js"></script>
 </header>
@@ -906,15 +866,15 @@ a{
 <!-- Main Container Ends -->
 </body>
 <script>
-<script>
-function myFunction() {
-  var x = document.getElementById("myLinks");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
+function toggleMobileMenu(this){
+  var content = document.getElementById("container3");
+
+  if(e.checked){
+     content.setAttribute( 'class', 'push-down' );
+
+  }else{
+     content.setAttribute( 'class', '' );
   }
 }
-</script>
 </script>	
 </html>
