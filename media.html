@@ -800,7 +800,7 @@ a{
 	<li><a href="index.html">HOME<span></span><span></span><span></span><span></span></a></li>
       </ul>
     </nav>
-	<div id="hamburger-icon" onclick="onClickHandler(e)">
+	<div id="hamburger-icon" onclick="toggleMobileMenu(this)">
 	<div class="bar1"></div>
 		<div class="bar2"></div>
 		<div class="bar3"></div>
@@ -867,7 +867,7 @@ a{
 <!-- Main Container Ends -->
 </body>
 <script>
-function onClickHandler(e){
+function toggleMobileMenu(this){
   var content = document.getElementById("container3");
 
   if(e.checked){
