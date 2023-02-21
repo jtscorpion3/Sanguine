@@ -373,6 +373,10 @@ p{
 	margin: 6px 0;
 	transition: 0.4s;
 }
+#body.push-down
+{
+  margin-top:250px;
+}
 .open .bar1{
 	-webkit-transform: rotate(-45deg) translate(-6px, 6px);
 	transfor: rotate(-45deg) translate(-6px, 6px);
@@ -863,4 +867,16 @@ a{
   
 <!-- Main Container Ends -->
 </body>
+<script>
+function onClickHandler(e){
+  var content = document.getElementById("body");
+
+  if(e.checked){
+     content.setAttribute( 'class', 'push-down' );
+
+  }else{
+     content.setAttribute( 'class', '' );
+  }
+}
+</script>	
 </html>
