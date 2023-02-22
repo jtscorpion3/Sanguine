@@ -28,36 +28,7 @@
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-:root {
-  --blue: #007bff;
-  --indigo: #6610f2;
-  --purple: #6f42c1;
-  --pink: #e83e8c;
-  --red: #dc3545;
-  --orange: #fd7e14;
-  --yellow: #ffc107;
-  --green: #28a745;
-  --teal: #20c997;
-  --cyan: #17a2b8;
-  --white: #fff;
-  --gray: #6c757d;
-  --gray-dark: #343a40;
-  --primary: #007bff;
-  --secondary: #6c757d;
-  --success: #28a745;
-  --info: #17a2b8;
-  --warning: #ffc107;
-  --danger: #dc3545;
-  --light: #f8f9fa;
-  --dark: #343a40;
-  --breakpoint-xs: 0;
-  --breakpoint-sm: 576px;
-  --breakpoint-md: 768px;
-  --breakpoint-lg: 992px;
-  --breakpoint-xl: 1200px;
-  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-}
+
 
 *,
 *::before,
@@ -407,7 +378,7 @@ h5, .h5 {
 }
 
 h6, .h6 {
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .lead {
@@ -2538,7 +2509,7 @@ textarea.form-control {
 .btn {
   display: inline-block;
   font-weight: 400;
-  color: #212529;
+  color: #FFFFFF;
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
@@ -2562,7 +2533,7 @@ textarea.form-control {
 }
 
 .btn:hover {
-  color: #212529;
+  color: #7C1214;
   text-decoration: none;
 }
 
@@ -2941,14 +2912,14 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-success {
-  color: #28a745;
-  border-color: #28a745;
+  color: #D00000;
+  border-color: #D00000;
 }
 
 .btn-outline-success:hover {
   color: #fff;
-  background-color: #28a745;
-  border-color: #28a745;
+  background-color: #D00000;
+  border-color: #D00000;
 }
 
 .btn-outline-success:focus, .btn-outline-success.focus {
@@ -2963,8 +2934,8 @@ fieldset:disabled a.btn {
 .btn-outline-success:not(:disabled):not(.disabled):active, .btn-outline-success:not(:disabled):not(.disabled).active,
 .show > .btn-outline-success.dropdown-toggle {
   color: #fff;
-  background-color: #28a745;
-  border-color: #28a745;
+  background-color: #D00000;
+  border-color: #D00000;
 }
 
 .btn-outline-success:not(:disabled):not(.disabled):active:focus, .btn-outline-success:not(:disabled):not(.disabled).active:focus,
@@ -9062,6 +9033,7 @@ button.bg-dark:focus {
   .py-md-2 {
     padding-bottom: 0.5rem !important;
   }
+
   .pl-md-2,
   .px-md-2 {
     padding-left: 0.5rem !important;
@@ -10241,16 +10213,16 @@ a.text-dark:hover, a.text-dark:focus {
 /*# sourceMappingURL=bootstrap.css.map */	      
 	      
 body {
-	font-family: 'AgencyFB', sans-serif;
+	font-family: 'Agency FB', sans-serif;
+	font-weight: Bold;
 	background-color: #2A3237;
 	margin: 0;
 }
 .btn {
   font-size: 20px;
-  font-variant: small-caps;
   text-decoration: none;
-  color: #FFFFFF;
-  background-color: #000000;
+  color: #000000;
+  background-color: #FFFFFF;
   text-align: center;
   float: left;
   margin-top: 15px;
@@ -10374,7 +10346,7 @@ a{
   padding: 8px 15px;
   overflow: hidden;
   transition: 0.2s;
-  font-size: 30px;
+  font-size: 26px;
 }
 a:hover{
   color: #C40003;;
@@ -10500,7 +10472,6 @@ h3{
 	font-weight: Bold;
 }
 h4{
-	font-family: "AgencyFB";
 	font-size: 22px;
 }
 h8{
@@ -10509,19 +10480,21 @@ h8{
 p{
 	font-size: 22px;
 }
-.card {
+.cards {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   padding: 15px;
-  width: 20%;
+  width: 100%;
   margin-bottom: 200px;
-  float: left;
-  background-color: #2A3237;  
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #2A3237;
 }
 .cards {  
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 15px;
-  width: 20%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);  
+	width: 100%;
+  padding: 15px;	
   margin-bottom: 200px;
+  float: right;
   background-color: #2A3237;
 }	      
 .card:hover {
@@ -10530,7 +10503,11 @@ p{
 
 .containersa {
 	background-color: #E00029;
-	padding: 2px 16px;
+	width: 80%;
+	margin-left: 25px;
+	margin-bottom: 25px;
+	padding: 40px 32px;
+	float: left;
 	color: #FFFFFF;
 }
 .container {
@@ -10562,6 +10539,7 @@ p{
 	margin-left: auto;
 	margin-right: auto;
 	border-bottom-width: 0px;
+	justify-content: center;
 	padding-left: 0px;
 	padding-top: 10px;
 	padding-right: 0px;
@@ -10904,52 +10882,29 @@ a{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 300px;
   max-height: 300px;
-  min-width: 250px;
   margin-right: auto;
   margin-left: auto;
   padding: 15px;
   float: none;
-  margin-bottom: 25px;
+  margin-bottom: 100px;
   background-color: #2A3237;  
 }
 .cards {  
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 300px;
   max-height: 300px;
-  min-width: 250px;
+	width: 100%;
   margin-right: auto;
   margin-left: auto;
   padding: 15px;	
-  margin-bottom: 25px;
+  margin-bottom: 100px;
   float: none;
   background-color: #2A3237;
 }
 }
+
 @media (min-width: 769px) and (max-width: 1000px) {
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
-  max-height: 300px;
-  min-width: 250px;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 15px;
-  float: none;
-  margin-bottom: 25px;
-  background-color: #2A3237;  
-}
-.cards {  
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
-  max-height: 300px;
-  min-width: 250px;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 15px;	
-  margin-bottom: 25px;
-  float: none;
-  background-color: #2A3237;
-}
+
 .left_article {
 	height: auto;
 }
@@ -11014,6 +10969,31 @@ a{
 #menu {
 }
 
+
+.container7 {
+	margin-left: auto;
+	margin-right: auto;
+	justify-content: c
+	height: 500px;
+}
+
+.image {
+	float: left;
+	width: 16%;
+}
+
+.bottomrightcorner {
+	margin-left: 89%;
+	margin-top: 14%;
+	background-color: #ffffff
+}
+
+.newbutton {
+	background-color: red;
+	width: 100%;
+	height: 100%;
+}
+
 </style>
 <link href="file:///C|/Users/Joe/AppData/Roaming/Adobe/Dreamweaver CC 2017/en_US/Configuration/Temp/Assets/eamC8.tmp/css/singlePageTemplate.css" rel="stylesheet" type="text/css">
 <!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
@@ -11026,7 +11006,7 @@ a{
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body>
+  <body>
 <div class="containers">
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <a class="navbar-brand" href="#"><img src="SSwebsite.png" width="150px"></a>
@@ -11039,13 +11019,7 @@ a{
 		  <a class="nav-link" href="index.html">HOME<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="skills.html">GAMES</a>
-          </li>
-	<li class="nav-item">
-            <a class="nav-link" href="patch.html">UPDATE HISTORY</a>
-          </li>
-	<li class="nav-item">
-            <a class="nav-link" href="news.html">NEWS</a>
+            <a class="nav-link" href="patch.html">GAMES</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">STORE</a>
@@ -11066,51 +11040,24 @@ a{
 </div>
  <div class="container3">
     <h1> Social Media </h1>
- <div class="card">
-<a href="https://store.steampowered.com/app/1272240/Beat_The_Machine_Rebooted/"></a>
-<img border="0" alt="Steam" src="Enemies.png" width="100%" height="100%">	
-  <div class="containersa">
-    <h4><b>Steam:</b>
-    </h4> 	  	
-  </div>
-</div>
-<div class="card">
-<a href="https://www.youtube.com/channel/UC0Pz338oRhg-NgTVBfnnqHA"></a>
-<img border="0" alt="Youtube" src="YouIcon.png" width="100%" height="100%">	
-  <div class="containersa">
-    <h4><b>Youtube:</b>
-     </h4> 	
-  </div>
-</div>
-	
-<div class="card">
-<a href="https://discord.gg/TqWWeQaR34"></a>
-<img border="0" alt="Discord" src="DiscLogo.png" width="100%" height="100%">
-  <div class="containersa">
-    <h4><b>Discord:</b>	    
-    </h4> 	
-  </div>
-</div>
-	
-<div class="card">
-<a href="https://www.instagram.com/sanguine_studio/"></a>
-<img border="0" alt="Instagram" src="InstaLogo.png" width="100%" height="100%">
-  <div class="containersa">
-    <h4><b>Instagram:</b>
-    </h4> 	
-  </div>
-</div>
-	
-<div class="card">
-	<a href="https://twitter.com/StudiosSanguine"></a>
+<div class="cards">
+	<div class="image">
+<a href="https://twitter.com/StudiosSanguine"></a>
 <img border="0" alt="Twitter" src="TwitLogo.png" width="100%" height="100%">	
+	 </div>
   <div class="containersa">
-    <h4><b>Twitter:</b>
-   </h4> 	
+    <h5><b>Beat the Machine: Rebooted - Patch 1.33:</b>
+   </h5> 	
+	  <h6><b>Hey Cadets,
+Logan here! We wanted to push one final patch before the end of the year! Beat the Machine: Rebooted had two major updates this year, with the first being the launch of Rebooted and the second launching the skill tree refinement. We are now in the process of doing our major launch for 2023, while we cant discuss too much, just know that the Tutorial and Story are being worked on as we speak.</b>
+	  </h6> 
+	  
   </div>
+<div class="bottomrightcorner">
+	<a class="btn btn-outline-success my-2 my-sm-0" href="https://store.steampowered.com/news/app/1272240/view/5849644027703643904"> Read More</a>
 </div>
-</section>
-</header>
+</div>
+</div>
   <!-- Footer Section -->
   
 <!-- Main Container Ends -->
